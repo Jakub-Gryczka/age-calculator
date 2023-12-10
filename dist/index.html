@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Age calculator app</title>
+    <link rel="stylesheet" href="output.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body
+    class="grid grid-rows-[1fr_50px] place-items-center h-screen bg-neutral-off-white font-pop"
+  >
+    <main class="bg-neutral-white p-8 container rounded-2xl rounded-br-[100px]">
+      <section class="flex justify-around max-w-sm gap-3 md:gap-0">
+        <div>
+          <p
+            class="uppercase text-neutral-smokey-grey font-bold text-xs tracking-wider py-2"
+          >
+            Day
+          </p>
+          <input
+            type="number"
+            class="border rounded-md min-w-[5rem] max-w-[5vw] p-2 font-bold placeholder:text-neutral-smokey-grey"
+            placeholder="DD"
+          />
+        </div>
+        <div>
+          <p
+            class="uppercase text-neutral-smokey-grey font-bold text-xs tracking-wider py-2"
+          >
+            Month
+          </p>
+          <input
+            type="number"
+            class="border rounded-md min-w-[5rem] max-w-[5vw] p-2 font-bold placeholder:text-neutral-smokey-grey"
+            placeholder="MM"
+          />
+        </div>
+        <div>
+          <p
+            class="uppercase text-neutral-smokey-grey font-bold text-xs tracking-wider py-2"
+          >
+            Year
+          </p>
+          <input
+            type="number"
+            class="border rounded-md min-w-[5rem] max-w-[5vw] p-2 font-bold placeholder:text-neutral-smokey-grey"
+            placeholder="YYYY"
+          />
+        </div>
+      </section>
+      <section class="relative">
+        <hr class="h-1 mt-12 text-neutral-light-grey block" />
+        <div
+          class="absolute top-[-500%] left-[40%] flex justify-center items-center bg-purple-primary mx-auto my-0 h-12 w-12 rounded-full hover:bg-neutral-off-black cursor-pointer"
+        >
+          <button>
+            <img
+              src="assets/images/icon-arrow.svg"
+              alt="arrow icon"
+              class="w-5 h-5"
+            />
+          </button>
+        </div>
+      </section>
+      <section class="mt-8">
+        <p class="font-extrabold text-5xl italic py-2">
+          <span class="years text-purple-primary">38</span> years
+        </p>
+        <p class="font-extrabold text-5xl italic py-2">
+          <span class="months text-purple-primary">3</span> months
+        </p>
+        <p class="font-extrabold text-5xl italic py-2">
+          <span class="days text-purple-primary">26</span> days
+        </p>
+      </section>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
