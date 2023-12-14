@@ -10,6 +10,7 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+    <script defer src="script.js"></script>
     <title>Frontend Mentor | Age calculator app</title>
     <link rel="stylesheet" href="output.css" />
 
@@ -28,58 +29,75 @@
     class="grid grid-rows-[1fr_50px] place-items-center h-screen bg-neutral-off-white font-pop"
   >
     <main class="bg-neutral-white p-8 container rounded-2xl rounded-br-[100px]">
-      <section class="flex justify-around max-w-sm gap-3 md:gap-0">
-        <div>
-          <p
-            class="uppercase text-neutral-smokey-grey font-bold text-xs tracking-wider py-2"
-          >
-            Day
-          </p>
-          <input
-            type="number"
-            class="border outline-none rounded-md min-w-[5rem] max-w-[5vw] p-2 font-bold placeholder:text-neutral-smokey-grey focus:border-purple-primary"
-            placeholder="DD"
-          />
-        </div>
-        <div>
-          <p
-            class="uppercase text-neutral-smokey-grey font-bold text-xs tracking-wider py-2"
-          >
-            Month
-          </p>
-          <input
-            type="number"
-            class="border outline-none rounded-md min-w-[5rem] max-w-[5vw] p-2 font-bold placeholder:text-neutral-smokey-grey focus:border-purple-primary"
-            placeholder="MM"
-          />
-        </div>
-        <div>
-          <p
-            class="uppercase text-neutral-smokey-grey font-bold text-xs tracking-wider py-2"
-          >
-            Year
-          </p>
-          <input
-            type="number"
-            class="border outline-none rounded-md min-w-[5rem] max-w-[5vw] p-2 font-bold placeholder:text-neutral-smokey-grey focus:border-purple-primary"
-            placeholder="YYYY"
-          />
-        </div>
-      </section>
-      <section class="relative">
-        <hr class="h-1 mt-12 text-neutral-light-grey block" />
-        <div
-          class="absolute top-[-500%] left-[40%] flex justify-center items-center bg-purple-primary mx-auto my-0 h-12 w-12 rounded-full hover:bg-neutral-off-black cursor-pointer"
-        >
-          <button>
-            <img
-              src="assets/images/icon-arrow.svg"
-              alt="arrow icon"
-              class="w-5 h-5"
+      <form action="/" class="form">
+        <section class="flex justify-around max-w-sm gap-3">
+          <div>
+            <p
+              class="uppercase text-neutral-smokey-grey font-bold text-xs tracking-wider py-2"
+            >
+              Day
+            </p>
+            <input
+              type="number"
+              class="inputDay border outline-none rounded-md min-w-[5rem] max-w-[5vw] p-2 font-bold placeholder:text-neutral-smokey-grey focus:border-purple-primary"
+              placeholder="DD"
             />
-          </button>
-        </div>
-      </section>
+            <div
+              class="errorMessage errorDay text-neutral-smokey-grey italic font-thin text-[.65rem] whitespace-nowrap py-1 tracking-normal"
+            >
+              This field is required
+            </div>
+          </div>
+          <div>
+            <p
+              class="uppercase text-neutral-smokey-grey font-bold text-xs tracking-wider py-2"
+            >
+              Month
+            </p>
+            <input
+              type="number"
+              class="inputMonth border outline-none rounded-md min-w-[5rem] max-w-[5vw] p-2 font-bold placeholder:text-neutral-smokey-grey focus:border-purple-primary"
+              placeholder="MM"
+            />
+            <div
+              class="errorMessage errorMonth text-neutral-smokey-grey italic text-[.65rem] whitespace-nowrap py-1 tracking-normal"
+            >
+              This field is required
+            </div>
+          </div>
+          <div>
+            <p
+              class="uppercase text-neutral-smokey-grey font-bold text-xs tracking-wider py-2"
+            >
+              Year
+            </p>
+            <input
+              type="number"
+              class="inputYear border outline-none rounded-md min-w-[5rem] max-w-[5vw] p-2 font-bold placeholder:text-neutral-smokey-grey focus:border-purple-primary"
+              placeholder="YYYY"
+            />
+            <div
+              class="errorMessage errorYear text-neutral-smokey-grey italic font-normal text-[.65rem] whitespace-nowrap py-1 tracking-normal"
+            >
+              This field is required
+            </div>
+          </div>
+        </section>
+        <section class="relative">
+          <hr class="h-1 mt-12 text-neutral-light-grey block" />
+          <div
+            class="absolute top-[-500%] left-[40%] flex justify-center items-center bg-purple-primary mx-auto my-0 h-12 w-12 rounded-full hover:bg-neutral-off-black cursor-pointer"
+          >
+            <button class="btn" type="submit">
+              <img
+                src="assets/images/icon-arrow.svg"
+                alt="arrow icon"
+                class="w-5 h-5"
+              />
+            </button>
+          </div>
+        </section>
+      </form>
       <section class="mt-8">
         <p class="font-extrabold text-5xl italic py-2">
           <span class="years text-purple-primary">38</span> years
