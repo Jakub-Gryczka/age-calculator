@@ -1,26 +1,24 @@
 "use strict";
 const form = document.querySelector(".form");
 const btn = document.querySelector(".btn");
-const day = document.querySelector(".inputDay");
-const month = document.querySelector(".inputMonth");
-const year = document.querySelector(".inputYear");
+const inputs = document.querySelectorAll(".input");
 const errorElement = document.querySelectorAll(".errorMessage");
-const errorDay = document.querySelector(".errorDay");
-const errorMonth = document.querySelector(".errorMonth");
-const errorYear = document.querySelector(".errorYear");
+
+const [day, month, year] = inputs;
+const [dayError, monthError, yearError] = errorElement;
 
 form.addEventListener("submit", (e) => {
   let validate = {
     day: {
-      element: errorElement[0],
+      element: dayError,
       errorMessage: ["siema"],
     },
     month: {
-      element: errorElement[1],
+      element: monthError,
       errorMessage: [],
     },
     year: {
-      element: errorElement[2],
+      element: yearError,
       errorMessage: [],
     },
   };
