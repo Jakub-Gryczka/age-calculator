@@ -7,11 +7,11 @@
     margin: 0 auto;
     width: min(90%, 400px);
   }
-  .hidden {
-    display: none;
+  .visible {
+    display: block;
   }
   .error {
-    color: red;
+    border-color: hsl(0, 100%, 67%);
   }
 }
 

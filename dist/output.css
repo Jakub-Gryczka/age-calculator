@@ -620,6 +620,10 @@ video {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-1 {
   height: 0.25rem;
 }
@@ -706,16 +710,6 @@ video {
 
 .border {
   border-width: 1px;
-}
-
-.border-light-red {
-  --tw-border-opacity: 1;
-  border-color: hsl(0 100% 67% / var(--tw-border-opacity));
-}
-
-.border-r-purple-primary {
-  --tw-border-opacity: 1;
-  border-right-color: hsl(259 100% 65% / var(--tw-border-opacity));
 }
 
 .bg-neutral-off-white {
@@ -826,6 +820,10 @@ video {
   width: min(90%, 400px);
 }
 
+.error {
+  border-color: hsl(0, 100%, 67%);
+}
+
 @font-face {
   font-family: "Poppins";
 
@@ -853,6 +851,66 @@ video {
   border-color: hsl(259 100% 65% / var(--tw-border-opacity));
 }
 
-.peer:invalid ~ .peer-invalid\:visible {
-  visibility: visible;
+.group.error .group-\[\.error\]\:block {
+  display: block;
+}
+
+.group.error .group-\[\.error\]\:border-light-red {
+  --tw-border-opacity: 1;
+  border-color: hsl(0 100% 67% / var(--tw-border-opacity));
+}
+
+.group.error .group-\[\.error\]\:text-light-red {
+  --tw-text-opacity: 1;
+  color: hsl(0 100% 67% / var(--tw-text-opacity));
+}
+
+.group.error .group-\[\.error\]\:placeholder-light-red::-moz-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: hsl(0 100% 67% / var(--tw-placeholder-opacity));
+}
+
+.group.error .group-\[\.error\]\:placeholder-light-red::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: hsl(0 100% 67% / var(--tw-placeholder-opacity));
+}
+
+.group.error .group-\[\.error\]\:focus\:border-light-red:focus {
+  --tw-border-opacity: 1;
+  border-color: hsl(0 100% 67% / var(--tw-border-opacity));
+}
+
+.peer.error ~ .peer-\[\.error\]\:block {
+  display: block;
+}
+
+.peer.error ~ .peer-\[\.error\]\:border-light-red {
+  --tw-border-opacity: 1;
+  border-color: hsl(0 100% 67% / var(--tw-border-opacity));
+}
+
+.peer.error ~ .peer-\[\.error\]\:text-light-red {
+  --tw-text-opacity: 1;
+  color: hsl(0 100% 67% / var(--tw-text-opacity));
+}
+
+.peer.error ~ .peer-\[\.error\]\:placeholder-light-red::-moz-placeholder {
+  --tw-placeholder-opacity: 1;
+  color: hsl(0 100% 67% / var(--tw-placeholder-opacity));
+}
+
+.peer.error ~ .peer-\[\.error\]\:placeholder-light-red::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: hsl(0 100% 67% / var(--tw-placeholder-opacity));
+}
+
+.peer.error ~ .peer-\[\.error\]\:focus\:border-light-red:focus {
+  --tw-border-opacity: 1;
+  border-color: hsl(0 100% 67% / var(--tw-border-opacity));
+}
+
+@media (min-width: 768px) {
+  .md\:gap-5 {
+    gap: 1.25rem;
+  }
 }
