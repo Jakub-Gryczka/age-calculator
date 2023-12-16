@@ -5,6 +5,7 @@ module.exports = {
     colors: {
       "purple-primary": "hsl(259, 100%, 65%)",
       "light-red": "hsl(0, 100%, 67%)",
+      "link-color": "hsl(228, 45%, 44%)",
       neutral: {
         white: "hsl(0, 0%, 100%)",
         "off-white": "hsl(0, 0%, 94%)",
@@ -20,8 +21,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        'pop': ['Poppins', 'sans-serif']
-      }
+        pop: ["Poppins", "sans-serif"],
+      },
     },
   },
   plugins: [],

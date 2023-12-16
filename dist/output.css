@@ -660,6 +660,18 @@ video {
   max-width: 24rem;
 }
 
+.max-w-\[90\%\] {
+  max-width: 90%;
+}
+
+.max-w-\[60\%\] {
+  max-width: 60%;
+}
+
+.max-w-\[200px\] {
+  max-width: 200px;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -686,6 +698,10 @@ video {
 
 .gap-3 {
   gap: 0.75rem;
+}
+
+.self-center {
+  align-self: center;
 }
 
 .whitespace-nowrap {
@@ -735,6 +751,14 @@ video {
   padding: 2rem;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -745,13 +769,17 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .font-pop {
   font-family: Poppins, sans-serif;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-\[\.65rem\] {
@@ -808,6 +836,11 @@ video {
 .text-purple-primary {
   --tw-text-opacity: 1;
   color: hsl(259 100% 65% / var(--tw-text-opacity));
+}
+
+.text-link-color {
+  --tw-text-opacity: 1;
+  color: hsl(228 45% 44% / var(--tw-text-opacity));
 }
 
 .outline-none {
@@ -877,7 +910,28 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:left-0 {
+    left: 0px;
+  }
+
+  .md\:right-0 {
+    right: 0px;
+  }
+
+  .md\:left-\[100\%\] {
+    left: 100%;
+  }
+
+  .md\:left-\[90\%\] {
+    left: 90%;
+  }
+
   .md\:gap-5 {
     gap: 1.25rem;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 }

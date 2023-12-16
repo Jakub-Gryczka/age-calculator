@@ -17,10 +17,6 @@ const currentDay = date.getDay();
 const currentMonth = date.getMonth() + 1;
 const currentYear = date.getFullYear();
 
-function checkInput(type) {
-  this.errorMessage.push(`Must be a valid ${type}}`);
-}
-
 form.addEventListener("submit", (e) => {
   let validate = {
     day: {

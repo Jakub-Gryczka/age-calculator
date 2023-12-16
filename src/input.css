@@ -8,6 +8,8 @@
     width: min(90%, 400px);
   }
 }
+@layer base {
+}
 
 @font-face {
   font-family: "Poppins";
