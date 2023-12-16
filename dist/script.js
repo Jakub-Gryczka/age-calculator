@@ -10,19 +10,37 @@ const [dayError, monthError, yearError] = errorElement;
 form.addEventListener("submit", (e) => {
   let validate = {
     day: {
-      element: dayError,
+      input: day,
+      errorElement: dayError,
       errorMessage: ["siema"],
     },
     month: {
-      element: monthError,
+      input: month,
+      errorElement: monthError,
       errorMessage: [],
     },
     year: {
-      element: yearError,
+      input: year,
+      errorElement: yearError,
       errorMessage: [],
     },
   };
-  for (const { element, errorMessage } of Object.values(validate)) {
+  for (const { input, errorMessage } of Object.values(validate)) {
+    if (input.value === "" || input.value === null) {
+      errorMessage.push("This field is required");
+    }
+  }
+
+  if (day.value > 31 || day.value < 1) {
+    e.preventDefault();
+    validate.day.errorMessage.push("Day must be between 1 and 31");
+  }
+  if (month.value > 12 || month.value < 1) {
+    e.preventDefault();
+    validate.month.errorMessage.push("Month must be between 1 and 12");
+  }
+
+  for (const { errorMessage } of Object.values(validate)) {
     if (errorMessage.length > 0) {
       e.preventDefault();
       console.log("prevented");

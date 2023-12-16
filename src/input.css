@@ -10,6 +10,9 @@
   .hidden {
     display: none;
   }
+  .error {
+    color: red;
+  }
 }
 
 @font-face {
