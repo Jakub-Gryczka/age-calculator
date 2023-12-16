@@ -43,7 +43,7 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     validate.month.errorMessage.push("Must be a valid month");
   }
-  if (year.value > currentYear && year) {
+  if (year.value > currentYear) {
     e.preventDefault();
     validate.year.errorMessage.push("Must be in the past");
   }
@@ -57,7 +57,7 @@ form.addEventListener("submit", (e) => {
     if (errorMessage.length > 0) {
       item.classList.add("error");
       errorElement.classList.remove("hidden");
-      errorElement.textContent = errorMessage;
+      errorElement.textContent = errorMessage.slice(-1);
       e.preventDefault();
     }
   }

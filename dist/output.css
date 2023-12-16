@@ -820,10 +820,6 @@ video {
   width: min(90%, 400px);
 }
 
-.error {
-  border-color: hsl(0, 100%, 67%);
-}
-
 @font-face {
   font-family: "Poppins";
 
@@ -876,35 +872,6 @@ video {
 }
 
 .group.error .group-\[\.error\]\:focus\:border-light-red:focus {
-  --tw-border-opacity: 1;
-  border-color: hsl(0 100% 67% / var(--tw-border-opacity));
-}
-
-.peer.error ~ .peer-\[\.error\]\:block {
-  display: block;
-}
-
-.peer.error ~ .peer-\[\.error\]\:border-light-red {
-  --tw-border-opacity: 1;
-  border-color: hsl(0 100% 67% / var(--tw-border-opacity));
-}
-
-.peer.error ~ .peer-\[\.error\]\:text-light-red {
-  --tw-text-opacity: 1;
-  color: hsl(0 100% 67% / var(--tw-text-opacity));
-}
-
-.peer.error ~ .peer-\[\.error\]\:placeholder-light-red::-moz-placeholder {
-  --tw-placeholder-opacity: 1;
-  color: hsl(0 100% 67% / var(--tw-placeholder-opacity));
-}
-
-.peer.error ~ .peer-\[\.error\]\:placeholder-light-red::placeholder {
-  --tw-placeholder-opacity: 1;
-  color: hsl(0 100% 67% / var(--tw-placeholder-opacity));
-}
-
-.peer.error ~ .peer-\[\.error\]\:focus\:border-light-red:focus {
   --tw-border-opacity: 1;
   border-color: hsl(0 100% 67% / var(--tw-border-opacity));
 }
