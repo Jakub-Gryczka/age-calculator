@@ -12,7 +12,6 @@
 *.xd
 
 # Avoid your project being littered with annoying .DS_Store files!
-dist/
 .DS_Store
 .prettierignore
 style-guide.md

@@ -13,7 +13,7 @@ const [day, month, year] = inputs;
 const [dayError, monthError, yearError] = errorElement;
 
 const date = new Date();
-const currentDay = date.getDay();
+const currentDay = date.getDate();
 const currentMonth = date.getMonth() + 1;
 const currentYear = date.getFullYear();
 
@@ -74,13 +74,34 @@ form.addEventListener("submit", (e) => {
 
   if (!hasErrors) {
     const dateInput = new Date(year.value, month.value - 1, day.value);
-    const calculatedDates = {
-      day: currentDay - dateInput.getDay(),
-      month: currentMonth - dateInput.getMonth() - 1,
-      year: currentYear - dateInput.getFullYear(),
-    };
-    years.textContent = calculatedDates.year;
-    months.textContent = calculatedDates.month;
-    days.textContent = calculatedDates.day;
+    function dateDiff(inputDate, currDate) {
+      let diffYears = currDate.getFullYear() - inputDate.getFullYear();
+      let diffMonths = currDate.getMonth() - inputDate.getMonth();
+      let diffDays = currDate.getDate() - inputDate.getDate();
+
+      if (diffDays < 0) {
+        diffMonths--;
+        diffDays += new Date(
+          currDate.getFullYear(),
+          currDate.getMonth(),
+          0
+        ).getDate();
+      }
+
+      if (diffMonths < 0) {
+        diffYears--;
+        diffMonths += 12;
+      }
+
+      return {
+        years: diffYears,
+        months: diffMonths,
+        days: diffDays,
+      };
+    }
+    const diff = dateDiff(dateInput, date);
+    years.textContent = diff.years;
+    months.textContent = diff.months;
+    days.textContent = diff.days;
   }
 });
